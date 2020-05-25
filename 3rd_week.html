@@ -5,6 +5,40 @@
   <title>Introduce some song</title>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <script>
+      function LinksetColor(color){
+        var array=document.querySelectorAll('a')
+        var i=0;
+        while(i<array.length){
+            array[i].style.color=color;
+            i=i+1;
+        }
+      }
+
+      function BodysetColor(color){
+        var target=document.querySelector('body')
+        target.style.color=color;
+      }
+      function BodysetBackgroundColor(color){
+        var target=document.querySelector('body')
+        target.style.backgroundColor=color;
+      }
+      function nightDayHandler(self){
+            var target=document.querySelector('body')
+            if(self.value==='night'){
+                BodysetBackgroundColor('black');
+                BodysetColor('white');
+                self.value='day';
+                LinksetColor('powderblue');
+            }else{
+                BodysetBackgroundColor('white');
+                BodysetColor('black');
+                self.value='night';
+                LinksetColor('lightsalmon');
+            }
+        }
+
+  </script>
   <style>
     a{
         color:lightsalmon ;
@@ -14,32 +48,7 @@
         font-family: 'Pangolin', cursive;
     }
     </style>
-       
-    <script>
-        function nightDayHandler(self){
-            var target=document.querySelector('body')
-            var array=document.querySelectorAll('a')
-            if(self.value==='night'){
-                target.style.backgroundColor='black';
-                target.style.color='white';
-                self.value='day';
-                var i=0;
-                while(i<array.length){
-                    array[i].style.color='powderblue';
-                    i=i+1;
-                }
-            }else{
-                target.style.backgroundColor='white';
-                target.style.color='black';
-                self.value='night';
-                var i=0;
-                while(i<array.length){
-                    array[i].style.color='lightsalmon';
-                    i=i+1;
-                }
-            }
-        }
-    </script>
+
 </head>
 
 <body>
