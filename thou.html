@@ -29,35 +29,15 @@
           }
       }
   </style>
+  <script src="color.js"></script>
+
 </head>
 
 <body>
 
     <h1><a href="3rd_week.html" style="text-decoration:none;"> INTRODUCE SOME SONG <span id="mobile" style="font-size:small; color:gray;">__for mobile!</span> </a></h1>
 
-    <input type="button" value="night" onclick="
-    var target=document.querySelector('body')
-    var array=document.querySelectorAll('a')
-    if(this.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value='day';
-        var i=0;
-        while(i<array.length){
-            array[i].style.color='powderblue';
-            i=i+1;
-        }
-    }else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        this.value='night';
-        var i=0;
-        while(i<array.length){
-            array[i].style.color='lightsalmon';
-            i=i+1;
-        }
-    }    
-    ">
+    <input type="button" value="night" onclick="nightDayHandler(this)">
 
     <ol style="list-style-type:none;">
         <li><a href="if.html" style="text-decoration:none;">「IF WE HAVE EACH OTHER」 - Alec Benjamin</a> </li>
