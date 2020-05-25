@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>Introduce some song</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <style>
+    a{
+        color:lightsalmon ;
+    }
+    body{
+        text-align: center;
+        font-family: 'Pangolin', cursive;
+    }
+    </style>
+       
+    <script>
+        function nightDayHandler(self){
+            var target=document.querySelector('body')
+            var array=document.querySelectorAll('a')
+            if(self.value==='night'){
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                self.value='day';
+                var i=0;
+                while(i<array.length){
+                    array[i].style.color='powderblue';
+                    i=i+1;
+                }
+            }else{
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                self.value='night';
+                var i=0;
+                while(i<array.length){
+                    array[i].style.color='lightsalmon';
+                    i=i+1;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1><a href="3rd_week.html" style="text-decoration:none;"> INTRODUCE SOME SONG </a></h1>
+
+    <input type="button" value="night" onclick="nightDayHandler(this);">
+
+    <ol style="list-style-type:none;">
+        <li><a href="if.html" style="text-decoration:none;">「IF WE HAVE EACH OTHER」 - Alec Benjamin</a> </li>
+        <li><a href="thou.html" style="text-decoration:none;">「THOUSAND YEARS」 - Christina Perri</a></li>
+        <li><a href="hold.html" style="text-decoration:none;">「HOLD ON」 - Michael Buble</a></li>
+    </ol>
+
+    I JUST WANT TO RECOMMEND SOME SONGS THAT I REALLY LOVE TO LISTEN :)
+
+
+
+
+    <br><br>
+    <input type="button" value="night" onclick="nightDayHandler(this);">
+
+</body>
