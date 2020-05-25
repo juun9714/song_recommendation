@@ -1,21 +1,16 @@
 var Boddy = {
     setColor : function(color){
-        document.querySelector('body').style.color=color;
+        $('body').css('color',color);
   },
       setBackgroundColor : function(color){
-          document.querySelector('body').style.backgroundColor=color;
+          $('body').css('backgroundColor',color);
   }
 }
 
 var Links = {
-    setColor : function(color){
-        var array=document.querySelectorAll('a');
-        var i=0;
-        while(i<array.length){
-            array[i].style.color=color;
-            i=i+1;
-          }
-      }
+     setColor : function(color){
+         $('a').css('color',color);
+     }
   }
 
 function nightDayHandler(self){
